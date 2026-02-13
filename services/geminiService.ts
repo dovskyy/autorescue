@@ -6,14 +6,7 @@ export const diagnoseCarIssue = async (userDescription: string): Promise<string>
   // Mockowane odpowiedzi na podstawie słów kluczowych w opisie użytkownika
   const description = userDescription.toLowerCase();
 
-  if (description.includes('stuk') || description.includes('puka')) {
-    return "Na podstawie opisu (stuki), możliwe przyczyny to:\n\n" +
-           "1. Zużyte łożyska w zawieszeniu lub przeguby kulowe\n" +
-           "2. Luzy w układzie kierowniczym\n" +
-           "3. Elementy stabilizatora (gumy, łączniki)\n\n" +
-           "⚠️ Zalecamy wizytę w warsztacie - luzy w zawieszeniu mogą być niebezpieczne. Umów się na diagnostykę!";
-  }
-
+  // Priorytetowo sprawdzamy krytyczne problemy
   if (description.includes('dym') || description.includes('para')) {
     return "🚨 UWAGA! Dym z silnika może oznaczać poważną usterkę:\n\n" +
            "1. Przegrzanie silnika - sprawdź poziom płynu chłodzącego\n" +
@@ -28,6 +21,14 @@ export const diagnoseCarIssue = async (userDescription: string): Promise<string>
            "2. Nieszczelność w układzie hydraulicznym\n" +
            "3. Zużyty płyn hamulcowy (wilgotny, ciemny)\n\n" +
            "🚨 Nie odkładaj naprawy - problemy z hamulcami zagrażają bezpieczeństwu! Umów się na serwis jak najszybciej.";
+  }
+
+  if (description.includes('stuk') || description.includes('puka')) {
+    return "Na podstawie opisu (stuki), możliwe przyczyny to:\n\n" +
+           "1. Zużyte łożyska w zawieszeniu lub przeguby kulowe\n" +
+           "2. Luzy w układzie kierowniczym\n" +
+           "3. Elementy stabilizatora (gumy, łączniki)\n\n" +
+           "⚠️ Zalecamy wizytę w warsztacie - luzy w zawieszeniu mogą być niebezpieczne. Umów się na diagnostykę!";
   }
 
   if (description.includes('kontrolka') || description.includes('lampka')) {
