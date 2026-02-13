@@ -14,8 +14,8 @@ export const EmergencyBar: React.FC = () => {
 
   return (
     <>
-      {/* Mobile Bottom Bar - Always visible or sticky */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-brand-dark/90 backdrop-blur-lg border-t border-brand-red/30 md:hidden flex items-center justify-between gap-4">
+      {/* Mobile Bottom Bar - visible after scrolling past hero */}
+      <div className={`fixed bottom-0 left-0 right-0 z-50 p-4 bg-brand-dark/90 backdrop-blur-lg border-t border-brand-red/30 md:hidden flex items-center justify-between gap-4 transition-all duration-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
         <div className="flex flex-col">
           <span className="text-xs text-gray-400 uppercase font-bold">Awaria?</span>
           <span className="text-white font-bold">24/7 Assistance</span>
