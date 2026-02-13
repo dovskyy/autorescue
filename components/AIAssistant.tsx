@@ -9,14 +9,13 @@ export const AIAssistant: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: 'model', text: 'Cześć! Jestem wirtualnym mechanikiem AutoRescue. Opisz mi co dzieje się z Twoim autem (np. "słychać stuki przy skręcaniu"), a postaram się wstępnie zdiagnozować problem.' }
   ]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    scrollToBottom();
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }, [messages]);
 
   const handleSend = async () => {
@@ -92,7 +91,7 @@ export const AIAssistant: React.FC = () => {
               </div>
 
               {/* Chat Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-white/10">
+              <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-white/10">
                 {messages.map((msg, idx) => (
                   <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`max-w-[85%] rounded-2xl p-4 ${
@@ -112,7 +111,6 @@ export const AIAssistant: React.FC = () => {
                     </div>
                   </div>
                 )}
-                <div ref={messagesEndRef} />
               </div>
 
               {/* Input Area */}
