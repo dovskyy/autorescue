@@ -19,7 +19,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-lg">Adres</h4>
-                  <p className="text-gray-400">ul. Mechaniczna 15<br/>00-123 Warszawa</p>
+                  <p className="text-gray-400">ul. Wiejska 15<br/>00-123 Warszawa</p>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export const Contact: React.FC = () => {
                 width="100%" 
                 height="100%" 
                 title="mapa"
-                src="https://maps.google.com/maps?q=ul.+Mechaniczna+15,+Warszawa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=ul.+Wiejska+15,+Warszawa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 className="w-full h-full absolute inset-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
                 style={{ filter: 'grayscale(100%) invert(92%) contrast(83%)', border: 0 }}
                 loading="lazy"
@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
                     <h4 className="text-white font-bold text-lg">Jedź do nas</h4>
                   </div>
                   <a 
-                    href="https://www.google.com/maps/dir/?api=1&destination=ul.+Mechaniczna+15,+Warszawa" 
+                    href="https://www.google.com/maps/dir/?api=1&destination=ul.+Wiejska+15,+Warszawa" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full md:w-auto flex items-center justify-center gap-2 bg-brand-yellow hover:bg-yellow-500 text-brand-dark font-bold py-3 px-6 rounded-xl shadow-lg shadow-yellow-500/20 transition-all transform hover:scale-105"

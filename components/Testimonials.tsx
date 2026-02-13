@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     name: "Piotr Wiśniewski",
     role: "Klient indywidualny",
     content: "Najlepszy warsztat w regionie. Wymiana rozrządu zrobiona perfekcyjnie, a auto oddane umyte i pachnące. Polecam każdemu.",
-    rating: 4
+    rating: 5
   }
 ];
 

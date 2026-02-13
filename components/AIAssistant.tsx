@@ -54,7 +54,7 @@ export const AIAssistant: React.FC = () => {
               Niepokoi Cię dziwny dźwięk silnika? Kontrolka na desce rozdzielczej?
               Skorzystaj z naszego inteligentnego asystenta. Opisz problem, a otrzymasz
                 natychmiastową, wstępną poradę.
-                <strong> Uwaga: otrzymane informacje mają charakter orientacyjny i nie zastępują wizyty u mechanika. </strong>
+                <p className="text-brand-yellow"> Uwaga: W tej przykładowej realizacji/trybie demo AI nie jest włączone. Odpowiedzi są przykładowe. W środowisku realnym teksty generowane są przez prawdziwe AI. </p>
             </p>
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-center gap-3">
