@@ -6,9 +6,9 @@ export const Hero: React.FC = () => {
     <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="hero-image.jpg"
-          alt="Mechanic working on car" 
+        <img
+          src="hero-image.webp"
+          alt="Mechanic working on car"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/80 to-transparent"></div>

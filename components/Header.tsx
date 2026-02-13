@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
         {/* Logo Image */}
         <a href="#" className="block transition-transform hover:scale-105 duration-300">
           <img 
-            src="logo.png" 
+            src="logo.webp"
             alt="AutoRescue Logo" 
             className="h-12 md:h-16 w-auto object-contain drop-shadow-lg"
             onError={(e) => {
