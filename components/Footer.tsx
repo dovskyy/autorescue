@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
         {/* Logo Image */}
         <div className="flex items-center">
           <img 
-            src="logo.png" 
+            src="logo.webp"
             alt="AutoRescue Logo" 
             className="h-12 md:h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
           />
